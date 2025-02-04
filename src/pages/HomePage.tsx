@@ -1,19 +1,18 @@
 import React from "react";
 import HomeHeroCarousel from "../components/carousels/HomeHeroCarousel";
-import HorizontalProductCard from "../components/cards/HorizontalProductCard";
-import ProductCard from "@/components/cards/ProductCard";
-import ContentCard from "@/components/cards/ContentCard";
-import HorizontalContentCard from "@/components/cards/HorizontalContentCard";
+import ProductCarousel from "@/components/carousels/ProductCarousel";
+import EditorsPick from "@/components/sections/EditorsPick";
+import Bestseller from "@/components/sections/BestsellerSection";
+import FeaturedPostSection from "@/components/sections/FeaturedPostSection";
 
 const HomePage: React.FC = () => {
   return (
     <div>
       <HomeHeroCarousel />
-      <HorizontalProductCard />
-      <ProductCard />
-      <ContentCard />
-      <HorizontalContentCard />
-      <p>Discover our amazing products and deals!</p>
+      <EditorsPick />
+      <Bestseller />
+      <ProductCarousel />
+      <FeaturedPostSection />
       <div>
         {/* Add components or content for featured products, categories, etc. */}
       </div>
