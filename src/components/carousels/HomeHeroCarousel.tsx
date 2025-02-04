@@ -7,28 +7,33 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+interface Slide {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const slides: Slide[] = [
+  {
+    title: "GROSERIES DELIVERY",
+    description:
+      "We know how large objects will act, but things on a small scale just do not act that way.",
+    // image: `${process.env.NEXT_PUBLIC_VERCEL_URL}/DcoiB.png`,
+    image: "https://placehold.co/1440x640/cecece/blue",
+  },
+  {
+    title: "FRESH INGREDIENTS",
+    description: "Quality ingredients delivered right to your doorstep.",
+    image: "https://placehold.co/1440x640/cecece/red",
+  },
+  {
+    title: "FAST DELIVERY",
+    description: "Quick and reliable delivery service you can count on.",
+    image: "https://placehold.co/1440x640/cecece/green",
+  },
+];
 
 export default function HomeHeroCarousel() {
-  const slides = [
-    {
-      title: "GROSERIES DELIVERY",
-      description:
-        "We know how large objects will act, but things on a small scale just do not act that way.",
-      // image: `${process.env.NEXT_PUBLIC_VERCEL_URL}/DcoiB.png`,
-      image: "https://placehold.co/1440x640/cecece/blue",
-    },
-    {
-      title: "FRESH INGREDIENTS",
-      description: "Quality ingredients delivered right to your doorstep.",
-      image: "https://placehold.co/1440x640/cecece/red",
-    },
-    {
-      title: "FAST DELIVERY",
-      description: "Quick and reliable delivery service you can count on.",
-      image: "https://placehold.co/1440x640/cecece/green",
-    },
-  ];
-
   return (
     <Carousel className="w-full h-full relative">
       <CarouselContent>

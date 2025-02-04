@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HeaderDefault from "@/components/partials/HeaderDefault";
 import FooterDefault from "@/components/partials/FooterDefault";
-import HomePage from "@/views/HomePage";
+import HomePage from "@/pages/HomePage";
 
 function App() {
   return (
