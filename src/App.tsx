@@ -1,9 +1,12 @@
-import { Button } from "@/components/ui/button";
+import { Outlet } from "react-router-dom";
+import { Suspense } from "react";
+import Loader from "./components/ui/loader";
+
 function App() {
   return (
-    <>
-      <Button>click it </Button>
-    </>
+    <Suspense fallback={<Loader />}>
+      <Outlet />
+    </Suspense>
   );
 }
 
