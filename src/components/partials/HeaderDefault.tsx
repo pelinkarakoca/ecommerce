@@ -45,31 +45,18 @@ export default function HeaderDefault() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:text-[#23a6f0]">
+                <Link
+                  to="/shop"
+                  className={cn(
+                    "group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:text-[#23a6f0]",
+                    isActive("/shop") && "text-[#23a6f0]"
+                  )}
+                >
+                  {" "}
                   Shop
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-48 gap-3 p-4">
-                    <li>
-                      <Link
-                        to="/shop/new"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        New Arrivals
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/shop/popular"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Popular
-                      </Link>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
+                </Link>
+
+                <NavigationMenuContent></NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link
